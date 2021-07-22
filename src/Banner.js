@@ -1,4 +1,4 @@
-import axios from 'axios'
+import axios from '../src/axios'
 import React, { useState } from 'react'
 import { useEffect } from 'react'
 import requests from './request'
@@ -16,18 +16,32 @@ function Banner() {
         }
         fetchmovie();
     }, []);
-    console.log({ movie });
+
+    function truncate(str, n) {
+        return str?.length > n ? str.substr(0, n - 1) + "..." : str;
+    }
     return (
         <header className="Banner"
             style={{
                 backgroundSize: "cover",
-                backgroundImage: `url("https://image.tmdb.org/t/p/origiinal/${movie?.backdrop_path}")`,
-                backgroundPosition: "center center",
+                backgroundImage: `url("https://image.tmdb.org/t/p/original${movie?.backdrop_path}")`,
+                backgroundPosition: "center"
             }}
         >
             <div className="Banner_contents">
-                <h1>{movie?.tittle || movie?.name || movie?.original_name}</h1>
+                <h1 className="Banner_title">{movie?.title || movie?.name || movie?.original_name}</h1>
+                <div>
+                    <button className="Banner_Buttons">Play</button>
+                    <button className="Banner_Buttons">My list</button>
+                </div>
+                <h1 className="Banner_description">
+                    {truncate(movie?.overview, 150)}
+                </h1>
             </div>
+            <div className="banner_fadebottom">
+
+            </div>
+
         </header>
     )
 }

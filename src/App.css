@@ -1,10 +1,9 @@
 *{
   margin: 0;
-  background-color:black;
 }
 ::-webkit-scrollbar {
   width: 10px;
-  background-color: darkslategrey;
+  background-color: black;
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
@@ -15,6 +14,9 @@
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: grey; 
+}
+.App{
+  background-color: #111;
 }
 
 
