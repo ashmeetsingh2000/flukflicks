@@ -13,7 +13,7 @@ function App() {
 
             <Banner />
 
-            <Row tittle="NETFLIX ORIGINALS" fetchUrl={requests.fetchNetflixOriginals} islargeRow />
+            <Row tittle="FunFlix ORIGINALS" fetchUrl={requests.fetchNetflixOriginals} islargeRow />
             <Row tittle="Trending Now" fetchUrl={requests.fetchTrending} />
             <Row tittle="Top Rated Movies" fetchUrl={requests.fetchTopRated} />
             <Row tittle="Action Movies" fetchUrl={requests.fetchActionMovies} />

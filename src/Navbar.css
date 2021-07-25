@@ -9,6 +9,7 @@
 
     transition-timing-function: ease-in;
     transition: all 0.5s;
+    padding: 10px;
 }
 .nav_black{
     background-color: rgba(0, 0, 0, 0.8);
